@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! Built using modern web technologies, this site showcases my skills, projects, resume, and contact information. Designed to be fast, responsive, and SEO-optimized.
 
-🔗 Live Site: [https://<your-username>.github.io](https://<your-username>.github.io)
+🔗 Live Site: [https://venkataramana45.github.io/](https://venkataramana45.github.io/)
 
 ---
 
@@ -20,18 +20,15 @@ Welcome to my personal portfolio website! Built using modern web technologies, t
 
 ## 🛠️ Tech Stack
 
-| Frontend     | Deployment       | Tools & Services         |
-|--------------|------------------|---------------------------|
-| React / Vite | GitHub Pages     | Tailwind CSS, Figma, Git |
-| HTML & CSS   | GitHub Actions   | Firebase, Flutter (optional showcase) |
-| JavaScript   | Custom Domain (optional) | VSCode, GitHub |
+|   Frontend     |
+|----------------|
+|  React / Vite  |
+|  HTML & CSS    |
+|  JavaScript    |
+|  TailwindCSS   |
 
 ---
 
-## 🚀 Getting Started
+## 📬 Contact
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/<your-username>/<your-username>.github.io.git
-cd <your-username>.github.io
+Feel free to connect with me!
