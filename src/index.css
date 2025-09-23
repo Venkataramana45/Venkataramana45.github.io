@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+html{
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Prevent text selection and text cursor on non-input elements */
+body, div, span, section, article, header, footer, nav, aside, main, ul, li, ol, a, button {
+  user-select: none;
+  cursor: default;
+}
+
+/* Allow text selection and text cursor for input fields and textareas */
+input, textarea, [contenteditable="true"] {
+  user-select: text;
+  cursor: text;
+}
+
+/* Shared utilities */
+.contact-input {
+  @apply w-full rounded-md bg-white/90 px-3 py-2 placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-900;
+}
+
+/* Solar system layout */
+.solar-core {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-fuchsia-500 via-purple-500 to-amber-300 lg:blur-2xl blur-xl flex items-center justify-center;
+  width: 18%;
+  height: 18%;
+}
+
+.orbit {
+  @apply absolute rounded-full border border-neutral-200 flex items-center justify-center -translate-x-1/2 -translate-y-1/2;
+  left: 50%;
+  top: 50%;
+}
+
+.orbit-1 { width: 33%; height: 33%; animation: spin 20s linear infinite; }
+.orbit-2 { width: 50%; height: 50%; animation: spin 28s linear infinite reverse; }
+.orbit-3 { width: 65%; height: 65%; animation: spin 36s linear infinite; }
+.orbit-4 { width: 81%; height: 81%; animation: spin 44s linear infinite reverse; }
+
+.tag-chip {
+  @apply  px-2 py-1  h-8 md:h-13 w-auto rounded-md;
+}
+
+.orbit > .tag-chip {
+  position: absolute;
+}
+
+/* Roughly place chips around the circle */
+.orbit > .tag-chip:nth-child(1) { transform: translate(-50%, -50%); left: 50%; top: 0%; }
+.orbit > .tag-chip:nth-child(2) { transform: translate(-50%, -50%); left: 85%; top: 15%; }
+.orbit > .tag-chip:nth-child(3) { transform: translate(-50%, -50%); left: 100%; top: 50%; }
+.orbit > .tag-chip:nth-child(4) { transform: translate(-50%, -50%); left: 85%; top: 85%; }
+.orbit > .tag-chip:nth-child(5) { transform: translate(-50%, -50%); left: 50%; top: 100%; }
+.orbit > .tag-chip:nth-child(6) { transform: translate(-50%, -50%); left: 15%; top: 85%; }
+.orbit > .tag-chip:nth-child(7) { transform: translate(-50%, -50%); left: 0%; top: 50%; }
+.orbit > .tag-chip:nth-child(8) { transform: translate(-50%, -50%); left: 15%; top: 15%; }
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+.orbit.paused {
+  animation-play-state: paused;
+}
+
+.strike-gradient {
+  position: relative;
+  font-weight: 600;
+  background-image: linear-gradient(90deg,#d946ef,#8b5cf6,#f59e0b);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;           
+  background-position: left calc(50% + 0.1em);
+}
