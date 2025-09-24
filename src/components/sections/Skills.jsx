@@ -75,7 +75,6 @@ function ringPositions(count) {
 export default function Skills({theme}) {
 
   const [isHovered, setIsHovered] = useState(false);
-  // const [hoveredTag, setHoveredTag] = useState(null);
 
   const positions1 = ringPositions(orbit1.length)
   const positions2 = ringPositions(orbit2.length)
@@ -90,37 +89,32 @@ export default function Skills({theme}) {
     <Section id="skills" title="Skills" className={`${theme === 'dark' ? 'bg-neutral-900' : 'bg-white'}`} theme={theme}>
       <div className="relative mx-auto max-w-3xl aspect-square items-center">
         <div className="solar-core"/>
-        {/* <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full text-white flex items-center justify-center text-2xl font-bold'>{hoveredTag}</div> */}
+
 
         <div className={`orbit orbit-1 ${isHovered ? 'paused' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {orbit1.map(({ src, label }, i) => {
-            // <div key={t} className="tag-chip" style={{ left: positions1[i].left, top: positions1[i].top, transform: 'translate(-50%, -50%)' }}>{t}</div>
             return(<img src={src} key={label}  alt={label}  className="tag-chip"  style={{ left: positions1[i].left, top: positions1[i].top, transform: 'translate(-50%, -50%)' }}/>)
           })}
         </div>
 
         <div className={`orbit orbit-2 ${isHovered ? 'paused' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {orbit2.map(({ src, label }, i) => {
-            // <div key={t} className="tag-chip" style={{ left: positions2[i].left, top: positions2[i].top, transform: 'translate(-50%, -50%)' }}>{t}</div>
             return(<img src={src} key={label}  alt={label}  className="tag-chip"  style={{ left: positions2[i].left, top: positions2[i].top, transform: 'translate(-50%, -50%)' }}/>)
           })}
         </div>
 
         <div className={`orbit orbit-3 ${isHovered ? 'paused' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {orbit3.map(({ src, label }, i) => {
-            // <div key={t} className="tag-chip" style={{ left: positions3[i].left, top: positions3[i].top, transform: 'translate(-50%, -50%)' }}>{t}</div>
             return(<img src={src} key={label}  alt={label}  className="tag-chip"  style={{ left: positions3[i].left, top: positions3[i].top, transform: 'translate(-50%, -50%)' }}/>)
           })}
         </div>
 
         <div className={`orbit orbit-4 ${isHovered ? 'paused' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {orbit4.map(({ src, label }, i) => {
-            // <div key={t} className="tag-chip" style={{ left: positions4[i].left, top: positions4[i].top, transform: 'translate(-50%, -50%)' }}>{t}</div>
             return(<img src={src} key={label}  alt={label}  className="tag-chip"  style={{ left: positions4[i].left, top: positions4[i].top, transform: 'translate(-50%, -50%)' }}/>)
           })}
         </div>
       </div>
-      {/* <p className={`mt-8 text-center text-sm ${theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500'}`}>Logos replaced with labels; connect SVGs later.</p> */}
     </Section>
   )
 }

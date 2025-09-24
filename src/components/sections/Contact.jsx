@@ -25,7 +25,6 @@ export default function Contact({theme}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple front-end validation
     if (!formData.user_name || !formData.user_email || !formData.user_message) {
       setWarning(true);
       setTimeout(() => setWarning(false), 2000);
@@ -34,17 +33,16 @@ export default function Contact({theme}) {
 
     try {
       const response = await emailjs.send(
-        'service_wddym1k',      // Replace with your Service ID
-        'template_ib2vhyg',     // Replace with your Template ID
+        'service_wddym1k',
+        'template_ib2vhyg',
         formData,
-        'iISHKgtfn8kce9fT-'     // Replace with your User ID (public key)
+        'iISHKgtfn8kce9fT-'
       );
 
       console.log('SUCCESS!', response.status, response.text);
 
       setSuccess(true);
 
-      // Clear form
       setFormData({
         user_name: '',
         user_email: '',
@@ -52,7 +50,6 @@ export default function Contact({theme}) {
         user_message: ''
       });
 
-      // Auto-hide success message after 2 seconds
       setTimeout(() => setSuccess(false), 2000);
 
     } catch (err) {
@@ -77,9 +74,6 @@ export default function Contact({theme}) {
             <input placeholder="Email" type='email' name='user_email' onChange={handleChange} value={formData.user_email} className="contact-input text-black" />
           </div>
           <textarea placeholder="Message" name='user_message'  value={formData.user_message} onChange={handleChange} className="contact-input mt-4 h-32 text-black resize-none" />
-          {/* <div className="mt-4">
-            <label className="text-white/90 text-sm">Attach file</label>
-          </div> */}
           <button type="button" onClick={handleSubmit} className="mt-6 bg-neutral-900 text-white px-5 py-2 rounded-md">Submit now</button>
         </form>
         

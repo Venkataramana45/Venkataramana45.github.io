@@ -20,7 +20,6 @@ export default function Sidebar({ activeId, theme, onToggleTheme }) {
 
   const handleToggle = () => {
     toggle ? setToggle(false) : setToggle(true)
-    // toggle ? HTMLElement.style("scroll-behaviour: none;") : HTMLElement.style("scroll-behaviour: smooth;")
     document.body.style.overflow = toggle ? 'auto' : 'hidden'
   }
 
@@ -56,7 +55,6 @@ export default function Sidebar({ activeId, theme, onToggleTheme }) {
     </aside>
     <div className='lg:hidden block'>
             <div className={`fixed top-20 ${toggle ? `left-11/12` : `left-0`} w-5 h-20 bg-gray-300 bg-opacity-50 z-40 flex items-center justify-center rounded-r-md transition-all duration-300 ease-in-out`} onClick={handleToggle}>
-                {/* <LeftArrow/> */}
                 {toggle ? <LeftArrow/> : <RightArrow/>}
             </div>
     </div>

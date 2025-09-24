@@ -37,7 +37,6 @@ export default function ProjectsCategory({ type, onBack, theme }) {
       ]
   return (
     <Section id="projects-category" title={`${type.toUpperCase()} Projects`} className={theme === 'dark' ? 'bg-neutral-900' : 'bg-white'} theme={theme}>
-      {/* <button onClick={onBack} className={`mb-6 text-sm hover:underline ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}>← Back</button> */}
       <div className="grid gap-6 mb-10">
         {list.map((p) => (
           <div key={p.name} className={`rounded-xl border p-6 shadow-sm bg-white/5 flex gap-10  items-center ${theme === 'dark' ? 'border-neutral-800 bg-neutral-900' : 'border-neutral-200 bg-white'}`}>

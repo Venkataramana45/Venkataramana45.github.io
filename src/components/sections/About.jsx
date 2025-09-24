@@ -39,14 +39,6 @@ export default function About({ theme }) {
           </div>
         </div>
         <div className="text-justify lg:mb-0 mb-20">
-          {/* <div className="text-4xl font-black text-fuchsia-500">10+</div>
-          <div
-            className={`text-sm ${
-              theme === "dark" ? "text-neutral-300" : "text-neutral-600"
-            }`}
-          >
-            Years experience…
-          </div> */}
           <p
             className={`mt-3 lg:text-md text-sm ${
               theme === "dark" ? "text-neutral-300" : "text-neutral-700"
@@ -64,19 +56,6 @@ export default function About({ theme }) {
             I'm passionate about <span className="font-semibold">continuous learning</span> and always looking to take on <span className="font-semibold">new challenges</span>. I’m currently seeking opportunities where I can <span className="font-semibold">grow, contribute to impactful projects, and collaborate with teams</span> to build meaningful technology solutions.
           </p>
         </div>
-        {/* <div className="grid grid-cols-2 gap-6">
-          <div>
-            <div className="text-4xl font-black text-fuchsia-500">10+</div>
-            <div className={`text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}>Years experience…</div>
-            <p className={`mt-3 text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-700'}`}>Hello there! My name is <span className="font-semibold">Jacob Jones</span>. I am a web designer & developer, and I'm very passionate and dedicated to my work.</p>
-          </div>
-          <div>
-            <div className="text-4xl font-black text-orange-500">14</div>
-            <div className={`text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}>Clients worldwide…</div>
-            <p className={`mt-3 text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-700'}`}>10+ years experience as a professional graphic designer with strong skills to make your project a success.</p>
-          </div>
-          <div className="col-span-2 bg-neutral-900 text-white rounded-xl p-6 text-sm">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin.”</div>
-        </div> */}
       </div>
     </Section>
   );

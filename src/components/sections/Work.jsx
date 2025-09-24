@@ -32,7 +32,7 @@ export default function Work({ theme }) {
 
 
 useEffect(() => {
-  if (isHovered) return; // Don't auto-scroll when hovered
+  if (isHovered) return;
 
   const interval = setInterval(() => {
     setIndex((prevIndex) => {
@@ -58,7 +58,6 @@ useEffect(() => {
       theme={theme}
     >
       <div className="relative w-full" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        {/* Carousel container */}
         <div
           ref={containerRef}
           className="w-full overflow-hidden scroll-smooth"
@@ -79,7 +78,7 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* Left Button */}
+        
         {index > 0 && (
           <button
             onClick={prev}
@@ -89,7 +88,7 @@ useEffect(() => {
           </button>
         )}
 
-        {/* Right Button */}
+        
         {index < items.length - 1 && (
           <button
             onClick={next}
@@ -99,7 +98,7 @@ useEffect(() => {
           </button>
         )}
 
-        {/* Pagination Dots */}
+        
         <div className="flex justify-center gap-3 mt-6">
           {items.map((_, dotIdx) => (
             <button

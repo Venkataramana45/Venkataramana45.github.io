@@ -7,24 +7,24 @@ html{
 
 
 
-/* Prevent text selection and text cursor on non-input elements */
+
 body, div, span, section, article, header, footer, nav, aside, main, ul, li, ol, a, button {
   user-select: none;
   cursor: default;
 }
 
-/* Allow text selection and text cursor for input fields and textareas */
+
 input, textarea, [contenteditable="true"] {
   user-select: text;
   cursor: text;
 }
 
-/* Shared utilities */
+
 .contact-input {
   @apply w-full rounded-md bg-white/90 px-3 py-2 placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-900;
 }
 
-/* Solar system layout */
+
 .solar-core {
   @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-fuchsia-500 via-purple-500 to-amber-300 lg:blur-2xl blur-xl flex items-center justify-center;
   width: 18%;
@@ -50,7 +50,7 @@ input, textarea, [contenteditable="true"] {
   position: absolute;
 }
 
-/* Roughly place chips around the circle */
+
 .orbit > .tag-chip:nth-child(1) { transform: translate(-50%, -50%); left: 50%; top: 0%; }
 .orbit > .tag-chip:nth-child(2) { transform: translate(-50%, -50%); left: 85%; top: 15%; }
 .orbit > .tag-chip:nth-child(3) { transform: translate(-50%, -50%); left: 100%; top: 50%; }
