@@ -8,9 +8,14 @@ html{
 
 
 
-body, div, span, section, article, header, footer, nav, aside, main, ul, li, ol, a, button {
+body, div, span, section, article, header, footer, nav, aside, main, ul, li, ol{
   user-select: none;
   cursor: default;
+}
+
+a, button {
+  user-select: none;
+  cursor: pointer;
 }
 
 

@@ -66,7 +66,7 @@ export default function Contact({theme}) {
         <div>
           <div className={`text-2xl font-extrabold mb-4 ${theme === 'dark' ? 'text-white' : ''}`}>+91 8247435986</div>
           <div className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : ''}`}>mvr06apr@gmail.com</div>
-          <div className={`mt-8 text-sm max-w-md ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}>Sri nagar colony, Ramanthapur, Hyderabad, Telangana, India.</div>
+          <div className={`mt-8 text-sm max-w-md ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-600'}`}>Hyderabad, Telangana, India.</div>
         </div>
         <form className="p-6 rounded-2xl bg-gradient-to-br  from-fuchsia-500 via-purple-500 to-amber-300" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
